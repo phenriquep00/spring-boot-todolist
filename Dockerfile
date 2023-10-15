@@ -6,7 +6,7 @@ WORKDIR /path/to/your/project
 
 COPY . .
 
-RUN mvn clean install
+RUN mvn -Djdk.internal.lambda.dumpProxyClasses=/tmp clean install
 
 FROM openjdk:17-jdk-slim
 
